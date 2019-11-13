@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/app.css" />
   </head>
+  <style>
+    a:hover {
+      background: black;
+      color: white
+    }
+  </style>
   <body>
     <!-- NAVBAR -->
     <div
@@ -30,6 +36,12 @@
           </li>
         </ul>
       </div>
+      <div class="top-bar-left">
+          <ul class="menu">
+              <li><input type="text" placeholder="buscar"></li>
+              <li><button type="button" class="button warning">Buscar</button></li>
+            </ul>
+        </div>
       <div class="top-bar-right">
         <ul class="menu">
             <li><button type="button" class="button" style="margin-right: 10px">Entrar</button></li>
@@ -42,7 +54,7 @@
     <div class="grid-container fluid" style="padding: 0">
         <div class="grid-x">
           <!-- MENU LATERAL -->
-          <div class="cell small-2" style="height: 93vh; background: #1779BA;">
+          <div class="cell small-2 hide-for-small-only" style="height: 93vh; background: #1779BA;">
               <ul class="vertical menu">
                 <li style="background: black; color: white; padding: 10px" class="text-center">Categorias</li>
                 <li><a style="color: white;" href="#">Poema</a></li>
@@ -55,7 +67,7 @@
           </div>
           <!-- END MENU LATERAL -->
           <!-- CARDS -->
-          <div class="cell small-10">
+          <div class="cell small-12 medium-10">
               <div class="grid-x grid-padding-x">
                 <div class="cell small-12 medium-6 large-4">
                     <div class="card text-center">
@@ -124,7 +136,22 @@
                     </div>                      
                 </div>
               </div>
-          <!-- END CARDS -->              
+          <!-- END CARDS -->   
+          <!-- PAGINACAO -->
+          <nav aria-label="Pagination">
+              <ul class="pagination text-center">
+                <li class="pagination-previous disabled">Previous</li>
+                <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+                <li><a href="#" aria-label="Page 2">2</a></li>
+                <li><a href="#" aria-label="Page 3">3</a></li>
+                <li><a href="#" aria-label="Page 4">4</a></li>
+                <li class="ellipsis"></li>
+                <li><a href="#" aria-label="Page 12">12</a></li>
+                <li><a href="#" aria-label="Page 13">13</a></li>
+                <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
+              </ul>
+            </nav>        
+            <!-- END PAGINACAO    -->
           </div>
         </div>
       </div>
